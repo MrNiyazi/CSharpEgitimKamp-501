@@ -30,15 +30,15 @@
 		{
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.label1 = new System.Windows.Forms.Label();
-			this.textBox1 = new System.Windows.Forms.TextBox();
-			this.textBox2 = new System.Windows.Forms.TextBox();
+			this.txtProductId = new System.Windows.Forms.TextBox();
+			this.txtProductName = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
-			this.textBox3 = new System.Windows.Forms.TextBox();
+			this.txtProductPrice = new System.Windows.Forms.TextBox();
 			this.label3 = new System.Windows.Forms.Label();
 			this.button1 = new System.Windows.Forms.Button();
-			this.textBox4 = new System.Windows.Forms.TextBox();
+			this.txtProductStock = new System.Windows.Forms.TextBox();
 			this.label4 = new System.Windows.Forms.Label();
-			this.textBox5 = new System.Windows.Forms.TextBox();
+			this.txtCategory = new System.Windows.Forms.TextBox();
 			this.label5 = new System.Windows.Forms.Label();
 			this.button2 = new System.Windows.Forms.Button();
 			this.button3 = new System.Windows.Forms.Button();
@@ -65,19 +65,19 @@
 			this.label1.TabIndex = 2;
 			this.label1.Text = "Urun Id";
 			// 
-			// textBox1
+			// txtProductId
 			// 
-			this.textBox1.Location = new System.Drawing.Point(87, 24);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(134, 22);
-			this.textBox1.TabIndex = 3;
+			this.txtProductId.Location = new System.Drawing.Point(87, 24);
+			this.txtProductId.Name = "txtProductId";
+			this.txtProductId.Size = new System.Drawing.Size(134, 22);
+			this.txtProductId.TabIndex = 3;
 			// 
-			// textBox2
+			// txtProductName
 			// 
-			this.textBox2.Location = new System.Drawing.Point(87, 56);
-			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(134, 22);
-			this.textBox2.TabIndex = 5;
+			this.txtProductName.Location = new System.Drawing.Point(87, 56);
+			this.txtProductName.Name = "txtProductName";
+			this.txtProductName.Size = new System.Drawing.Size(134, 22);
+			this.txtProductName.TabIndex = 5;
 			// 
 			// label2
 			// 
@@ -88,12 +88,12 @@
 			this.label2.TabIndex = 4;
 			this.label2.Text = "Ürün Adı";
 			// 
-			// textBox3
+			// txtProductPrice
 			// 
-			this.textBox3.Location = new System.Drawing.Point(87, 97);
-			this.textBox3.Name = "textBox3";
-			this.textBox3.Size = new System.Drawing.Size(134, 22);
-			this.textBox3.TabIndex = 7;
+			this.txtProductPrice.Location = new System.Drawing.Point(87, 97);
+			this.txtProductPrice.Name = "txtProductPrice";
+			this.txtProductPrice.Size = new System.Drawing.Size(134, 22);
+			this.txtProductPrice.TabIndex = 7;
 			// 
 			// label3
 			// 
@@ -112,13 +112,14 @@
 			this.button1.TabIndex = 8;
 			this.button1.Text = "Listele";
 			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
-			// textBox4
+			// txtProductStock
 			// 
-			this.textBox4.Location = new System.Drawing.Point(87, 135);
-			this.textBox4.Name = "textBox4";
-			this.textBox4.Size = new System.Drawing.Size(134, 22);
-			this.textBox4.TabIndex = 10;
+			this.txtProductStock.Location = new System.Drawing.Point(87, 135);
+			this.txtProductStock.Name = "txtProductStock";
+			this.txtProductStock.Size = new System.Drawing.Size(134, 22);
+			this.txtProductStock.TabIndex = 10;
 			// 
 			// label4
 			// 
@@ -129,12 +130,12 @@
 			this.label4.TabIndex = 9;
 			this.label4.Text = "Stok";
 			// 
-			// textBox5
+			// txtCategory
 			// 
-			this.textBox5.Location = new System.Drawing.Point(87, 170);
-			this.textBox5.Name = "textBox5";
-			this.textBox5.Size = new System.Drawing.Size(134, 22);
-			this.textBox5.TabIndex = 12;
+			this.txtCategory.Location = new System.Drawing.Point(87, 170);
+			this.txtCategory.Name = "txtCategory";
+			this.txtCategory.Size = new System.Drawing.Size(134, 22);
+			this.txtCategory.TabIndex = 12;
 			// 
 			// label5
 			// 
@@ -151,7 +152,7 @@
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(198, 40);
 			this.button2.TabIndex = 13;
-			this.button2.Text = "Güncelle";
+			this.button2.Text = "Ekle";
 			this.button2.UseVisualStyleBackColor = true;
 			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
@@ -170,7 +171,7 @@
 			this.button4.Name = "button4";
 			this.button4.Size = new System.Drawing.Size(198, 40);
 			this.button4.TabIndex = 15;
-			this.button4.Text = "Id ye göre getir";
+			this.button4.Text = "Güncelle";
 			this.button4.UseVisualStyleBackColor = true;
 			// 
 			// Form1
@@ -182,16 +183,16 @@
 			this.Controls.Add(this.button4);
 			this.Controls.Add(this.button3);
 			this.Controls.Add(this.button2);
-			this.Controls.Add(this.textBox5);
+			this.Controls.Add(this.txtCategory);
 			this.Controls.Add(this.label5);
-			this.Controls.Add(this.textBox4);
+			this.Controls.Add(this.txtProductStock);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.button1);
-			this.Controls.Add(this.textBox3);
+			this.Controls.Add(this.txtProductPrice);
 			this.Controls.Add(this.label3);
-			this.Controls.Add(this.textBox2);
+			this.Controls.Add(this.txtProductName);
 			this.Controls.Add(this.label2);
-			this.Controls.Add(this.textBox1);
+			this.Controls.Add(this.txtProductId);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.dataGridView1);
 			this.Name = "Form1";
@@ -207,15 +208,15 @@
 
 		private System.Windows.Forms.DataGridView dataGridView1;
 		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.TextBox textBox1;
-		private System.Windows.Forms.TextBox textBox2;
+		private System.Windows.Forms.TextBox txtProductId;
+		private System.Windows.Forms.TextBox txtProductName;
 		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.TextBox textBox3;
+		private System.Windows.Forms.TextBox txtProductPrice;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.TextBox textBox4;
+		private System.Windows.Forms.TextBox txtProductStock;
 		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.TextBox textBox5;
+		private System.Windows.Forms.TextBox txtCategory;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.Button button3;
