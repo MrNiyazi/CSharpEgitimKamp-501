@@ -41,8 +41,14 @@
 			this.txtCategory = new System.Windows.Forms.TextBox();
 			this.label5 = new System.Windows.Forms.Label();
 			this.button2 = new System.Windows.Forms.Button();
-			this.button3 = new System.Windows.Forms.Button();
-			this.button4 = new System.Windows.Forms.Button();
+			this.btnDelete = new System.Windows.Forms.Button();
+			this.btnUpdate = new System.Windows.Forms.Button();
+			this.lblTotalProductCunt = new System.Windows.Forms.Label();
+			this.label7 = new System.Windows.Forms.Label();
+			this.lblMaxProductName = new System.Windows.Forms.Label();
+			this.label8 = new System.Windows.Forms.Label();
+			this.lblDistinctCategoryCount = new System.Windows.Forms.Label();
+			this.label9 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -156,32 +162,100 @@
 			this.button2.UseVisualStyleBackColor = true;
 			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
-			// button3
+			// btnDelete
 			// 
-			this.button3.Location = new System.Drawing.Point(23, 301);
-			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(198, 40);
-			this.button3.TabIndex = 14;
-			this.button3.Text = "Sil";
-			this.button3.UseVisualStyleBackColor = true;
+			this.btnDelete.Location = new System.Drawing.Point(23, 301);
+			this.btnDelete.Name = "btnDelete";
+			this.btnDelete.Size = new System.Drawing.Size(198, 40);
+			this.btnDelete.TabIndex = 14;
+			this.btnDelete.Text = "Sil";
+			this.btnDelete.UseVisualStyleBackColor = true;
+			this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
 			// 
-			// button4
+			// btnUpdate
 			// 
-			this.button4.Location = new System.Drawing.Point(23, 347);
-			this.button4.Name = "button4";
-			this.button4.Size = new System.Drawing.Size(198, 40);
-			this.button4.TabIndex = 15;
-			this.button4.Text = "Güncelle";
-			this.button4.UseVisualStyleBackColor = true;
+			this.btnUpdate.Location = new System.Drawing.Point(23, 347);
+			this.btnUpdate.Name = "btnUpdate";
+			this.btnUpdate.Size = new System.Drawing.Size(198, 40);
+			this.btnUpdate.TabIndex = 15;
+			this.btnUpdate.Text = "Güncelle";
+			this.btnUpdate.UseVisualStyleBackColor = true;
+			this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+			// 
+			// lblTotalProductCunt
+			// 
+			this.lblTotalProductCunt.AutoSize = true;
+			this.lblTotalProductCunt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+			this.lblTotalProductCunt.Location = new System.Drawing.Point(8, 460);
+			this.lblTotalProductCunt.Name = "lblTotalProductCunt";
+			this.lblTotalProductCunt.Size = new System.Drawing.Size(294, 32);
+			this.lblTotalProductCunt.TabIndex = 16;
+			this.lblTotalProductCunt.Text = "Toplam Kitap Sayısı:";
+			// 
+			// label7
+			// 
+			this.label7.AutoSize = true;
+			this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+			this.label7.Location = new System.Drawing.Point(308, 460);
+			this.label7.Name = "label7";
+			this.label7.Size = new System.Drawing.Size(31, 32);
+			this.label7.TabIndex = 17;
+			this.label7.Text = "0";
+			// 
+			// lblMaxProductName
+			// 
+			this.lblMaxProductName.AutoSize = true;
+			this.lblMaxProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+			this.lblMaxProductName.Location = new System.Drawing.Point(271, 509);
+			this.lblMaxProductName.Name = "lblMaxProductName";
+			this.lblMaxProductName.Size = new System.Drawing.Size(31, 32);
+			this.lblMaxProductName.TabIndex = 19;
+			this.lblMaxProductName.Text = "0";
+			// 
+			// label8
+			// 
+			this.label8.AutoSize = true;
+			this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+			this.label8.Location = new System.Drawing.Point(12, 509);
+			this.label8.Name = "label8";
+			this.label8.Size = new System.Drawing.Size(234, 32);
+			this.label8.TabIndex = 18;
+			this.label8.Text = "En Pahalı Kitap:";
+			// 
+			// lblDistinctCategoryCount
+			// 
+			this.lblDistinctCategoryCount.AutoSize = true;
+			this.lblDistinctCategoryCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+			this.lblDistinctCategoryCount.Location = new System.Drawing.Point(312, 571);
+			this.lblDistinctCategoryCount.Name = "lblDistinctCategoryCount";
+			this.lblDistinctCategoryCount.Size = new System.Drawing.Size(31, 32);
+			this.lblDistinctCategoryCount.TabIndex = 21;
+			this.lblDistinctCategoryCount.Text = "0";
+			// 
+			// label9
+			// 
+			this.label9.AutoSize = true;
+			this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+			this.label9.Location = new System.Drawing.Point(12, 571);
+			this.label9.Name = "label9";
+			this.label9.Size = new System.Drawing.Size(308, 32);
+			this.label9.TabIndex = 20;
+			this.label9.Text = "Kategori Kitap Sayısı:";
 			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.DarkSeaGreen;
-			this.ClientSize = new System.Drawing.Size(1008, 402);
-			this.Controls.Add(this.button4);
-			this.Controls.Add(this.button3);
+			this.ClientSize = new System.Drawing.Size(1008, 820);
+			this.Controls.Add(this.lblDistinctCategoryCount);
+			this.Controls.Add(this.label9);
+			this.Controls.Add(this.lblMaxProductName);
+			this.Controls.Add(this.label8);
+			this.Controls.Add(this.label7);
+			this.Controls.Add(this.lblTotalProductCunt);
+			this.Controls.Add(this.btnUpdate);
+			this.Controls.Add(this.btnDelete);
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.txtCategory);
 			this.Controls.Add(this.label5);
@@ -219,8 +293,14 @@
 		private System.Windows.Forms.TextBox txtCategory;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Button button2;
-		private System.Windows.Forms.Button button3;
-		private System.Windows.Forms.Button button4;
+		private System.Windows.Forms.Button btnDelete;
+		private System.Windows.Forms.Button btnUpdate;
+		private System.Windows.Forms.Label lblTotalProductCunt;
+		private System.Windows.Forms.Label label7;
+		private System.Windows.Forms.Label lblMaxProductName;
+		private System.Windows.Forms.Label label8;
+		private System.Windows.Forms.Label lblDistinctCategoryCount;
+		private System.Windows.Forms.Label label9;
 	}
 }
 
